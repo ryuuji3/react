@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@ryuuji3/react",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -7,5 +7,9 @@
   "dependencies": {},
   "devDependencies": {
     "lerna": "^8.1.8"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
   }
 }
