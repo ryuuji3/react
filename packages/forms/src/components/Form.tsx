@@ -5,7 +5,7 @@ function Form<T extends object>({ children, onSubmit }: FormProps<T>):JSX.Elemen
 
     return (
         <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={onSubmit ? handleSubmit(onSubmit) : undefined}
         >
             {children}
         </form>
@@ -13,7 +13,7 @@ function Form<T extends object>({ children, onSubmit }: FormProps<T>):JSX.Elemen
 }
 
 interface FormProps<T extends object> {
-    onSubmit: SubmitHandler<T>;
+    onSubmit?: SubmitHandler<T>;
 
     children: React.ReactNode;
 }
